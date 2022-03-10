@@ -26,56 +26,57 @@ export class app {
 
             const divStar  = document.createElement('div');
             divStar.classList.add('star');
-            if(current.reviews == 5){
+            switch(current.reviews){
+                case 0: 
                 divStar.innerHTML  = `
-                <img src="src/img/Vector.png" alt="">
-                <img src="src/img/Vector.png" alt="">
-                <img src="src/img/Vector.png" alt="">
-                <img src="src/img/Vector.png" alt="">
-                <img src="src/img/Vector.png" alt="">
-                
+                    <img src="src/img/VectorApagada.png" alt="">
+                    <img src="src/img/VectorApagada.png" alt="">
+                    <img src="src/img/VectorApagada.png" alt="">
+                    <img src="src/img/VectorApagada.png" alt="">
+                    <img src="src/img/VectorApagada.png" alt="">
                 `
-            }else if(current.reviews == 4){
-                divStar.innerHTML  = `
-                <img src="src/img/Vector.png" alt="">
-                <img src="src/img/Vector.png" alt="">
-                <img src="src/img/Vector.png" alt="">
-                <img src="src/img/Vector.png" alt="">
-                <img src="src/img/VectorApagada.png" alt="">
-                
+                case 1: 
+                    divStar.innerHTML  = `
+                    <img src="src/img/Vector.png" alt="">
+                    <img src="src/img/VectorApagada.png" alt="">
+                    <img src="src/img/VectorApagada.png" alt="">
+                    <img src="src/img/VectorApagada.png" alt="">
+                    <img src="src/img/VectorApagada.png" alt="">
+                    `
+                break;
+                case 2:
+                    divStar.innerHTML  = `
+                    <img src="src/img/Vector.png" alt="">
+                    <img src="src/img/Vector.png" alt="">
+                    <img src="src/img/VectorApagada.png" alt="">
+                    <img src="src/img/VectorApagada.png" alt="">
+                    <img src="src/img/VectorApagada.png" alt="">
+                    `
+                break;
+                case 3:
+                    divStar.innerHTML  = `
+                    <img src="src/img/Vector.png" alt="">
+                    <img src="src/img/Vector.png" alt="">
+                    <img src="src/img/Vector.png" alt="">
+                    <img src="src/img/VectorApagada.png" alt="">
+                    <img src="src/img/VectorApagada.png" alt="">
                 `
-            }else if(current.reviews == 3){
-                divStar.innerHTML  = `
-                <img src="src/img/Vector.png" alt="">
-                <img src="src/img/Vector.png" alt="">
-                <img src="src/img/Vector.png" alt="">
-                <img src="src/img/VectorApagada.png" alt="">
-                <img src="src/img/VectorApagada.png" alt="">
-                
+                case 4:
+                    divStar.innerHTML  = `
+                    <img src="src/img/Vector.png" alt="">
+                    <img src="src/img/Vector.png" alt="">
+                    <img src="src/img/Vector.png" alt="">
+                    <img src="src/img/Vector.png" alt="">
+                    <img src="src/img/VectorApagada.png" alt="">
                 `
-            }else if(current.reviews == 2){
-                divStar.innerHTML  = `
-                <img src="src/img/Vector.png" alt="">
-                <img src="src/img/Vector.png" alt="">
-                <img src="src/img/VectorApagada.png" alt="">
-                <img src="src/img/VectorApagada.png" alt="">
-                <img src="src/img/VectorApagada.png" alt="">
-                `
-            }else if(current.reviews == 1){
-                divStar.innerHTML  = `
-                <img src="src/img/Vector.png" alt="">
-                <img src="src/img/VectorApagada.png" alt="">
-                <img src="src/img/VectorApagada.png" alt="">
-                <img src="src/img/VectorApagada.png" alt="">
-                <img src="src/img/VectorApagada.png" alt="">
-                `
-            }else{
-                divStar.innerHTML  = `
-                <img src="src/img/VectorApagada.png" alt="">
-                <img src="src/img/VectorApagada.png" alt="">
-                <img src="src/img/VectorApagada.png" alt="">
-                <img src="src/img/VectorApagada.png" alt="">
-                <img src="src/img/VectorApagada.png" alt="">
+                break
+                case 5:
+                    divStar.innerHTML  = `
+                    <img src="src/img/Vector.png" alt="">
+                    <img src="src/img/Vector.png" alt="">
+                    <img src="src/img/Vector.png" alt="">
+                    <img src="src/img/Vector.png" alt="">
+                    <img src="src/img/Vector.png" alt="">
                 `
             }
             

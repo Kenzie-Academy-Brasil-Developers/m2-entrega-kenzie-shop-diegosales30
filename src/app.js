@@ -23,67 +23,39 @@ export class app {
             const img = document.createElement('img');
             img.src = `https://kenzie-academy-brasil.gitlab.io/fullstack/frontend/modulo2/sprint3/img/consumindo-api-produtos/${current.id}/Image.png`;
             
-
             const divStar  = document.createElement('div');
+
             divStar.classList.add('star');
-            switch(current.reviews){
-                case 0: 
-                divStar.innerHTML  = `
-                    <img src="src/img/VectorApagada.png" alt="">
-                    <img src="src/img/VectorApagada.png" alt="">
-                    <img src="src/img/VectorApagada.png" alt="">
-                    <img src="src/img/VectorApagada.png" alt="">
-                    <img src="src/img/VectorApagada.png" alt="">
-                `
-                case 1: 
-                    divStar.innerHTML  = `
-                    <img src="src/img/Vector.png" alt="">
-                    <img src="src/img/VectorApagada.png" alt="">
-                    <img src="src/img/VectorApagada.png" alt="">
-                    <img src="src/img/VectorApagada.png" alt="">
-                    <img src="src/img/VectorApagada.png" alt="">
-                    `
-                break;
-                case 2:
-                    divStar.innerHTML  = `
-                    <img src="src/img/Vector.png" alt="">
-                    <img src="src/img/Vector.png" alt="">
-                    <img src="src/img/VectorApagada.png" alt="">
-                    <img src="src/img/VectorApagada.png" alt="">
-                    <img src="src/img/VectorApagada.png" alt="">
-                    `
-                break;
-                case 3:
-                    divStar.innerHTML  = `
-                    <img src="src/img/Vector.png" alt="">
-                    <img src="src/img/Vector.png" alt="">
-                    <img src="src/img/Vector.png" alt="">
-                    <img src="src/img/VectorApagada.png" alt="">
-                    <img src="src/img/VectorApagada.png" alt="">
-                `
-                case 4:
-                    divStar.innerHTML  = `
-                    <img src="src/img/Vector.png" alt="">
-                    <img src="src/img/Vector.png" alt="">
-                    <img src="src/img/Vector.png" alt="">
-                    <img src="src/img/Vector.png" alt="">
-                    <img src="src/img/VectorApagada.png" alt="">
-                `
-                break
+            let estrela;
+            const estrelaApagada = 5;
+            switch (current.reviews){
                 case 5:
-                    divStar.innerHTML  = `
-                    <img src="src/img/Vector.png" alt="">
-                    <img src="src/img/Vector.png" alt="">
-                    <img src="src/img/Vector.png" alt="">
-                    <img src="src/img/Vector.png" alt="">
-                    <img src="src/img/Vector.png" alt="">
-                `
+                    estrela = 5;
+                    break;
+                case 4:
+                    estrela = 4;
+                    break;
+                case 3:
+                    estrela = 3;
+                    break;
+                case 2:
+                    estrela = 2;
+                    break;
+                case 1:
+                    estrela = 1;
+                    break;
+            }
+
+            const output = estrelaApagada - estrela
+            for(let i = 1; i <= estrela; i++){
+                divStar.innerHTML += '<img src="src/img/Vector.png" alt="">'
+            }
+            for(let i = 1; i <= output; i++){
+                divStar.innerHTML += '<img src="src/img/VectorApagada.png" alt="">'
             }
             
-
             const p = document.createElement('p');
             p.innerText = `${current.productName}`;
-            
 
             const span = document.createElement('span');
             if(current.promotionStatus){
